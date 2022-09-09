@@ -1,0 +1,20 @@
+name: Second workflow
+
+env:
+  msg: "This is env variable"
+
+on:
+  push:
+    branches: [ "main-dev" ]
+
+  workflow_dispatch:
+
+jobs:
+  Job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run : echo $msg
+      
+
