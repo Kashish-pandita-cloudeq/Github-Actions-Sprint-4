@@ -1,4 +1,4 @@
-name: Second workflow
+name: First workflow
 
 env:
   msg: "This is env variable"
