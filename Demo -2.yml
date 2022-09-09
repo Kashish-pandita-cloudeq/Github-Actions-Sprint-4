@@ -1,0 +1,28 @@
+name: First workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  Job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo This is second demo.
+      - name: Run a multi-line script
+        run: |
+          echo We are at Cloudeq,
+          echo Terraform is required.
+
+  Job_2:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run : echo What is the status ?
