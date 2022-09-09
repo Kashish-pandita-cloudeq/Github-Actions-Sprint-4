@@ -2,6 +2,9 @@
 
 name: First workflow
 
+env:
+  msg: "This is env variable"
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -48,7 +51,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run : echo Pushing code to master branch
+        run : echo $msg
 
       
           
